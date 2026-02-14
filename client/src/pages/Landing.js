@@ -11,7 +11,7 @@ const Landing = () => {
   return (
     <>
       <Helmet>
-        <title>Tydii Digital - AI-Powered Tools for Modern Businesses</title>
+        <title>Tydii Digital</title>
         <meta
           name="description"
           content="Tydii Digital builds practical software products to help modern businesses operate, automate, and grow."
