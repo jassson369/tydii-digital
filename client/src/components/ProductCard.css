@@ -81,6 +81,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-block;
+  text-decoration: none;
 }
 
 .product-placeholder-link:hover {

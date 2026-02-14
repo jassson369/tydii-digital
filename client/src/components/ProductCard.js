@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
@@ -10,9 +11,15 @@ const ProductCard = ({ product }) => {
       </div>
       <p className="product-description">{product.description}</p>
       <div className="product-card-footer">
-        <div className="product-placeholder-link">
-          Learn More →
-        </div>
+        {product.link ? (
+          <Link to={product.link} className="product-placeholder-link">
+            Learn More →
+          </Link>
+        ) : (
+          <div className="product-placeholder-link">
+            Learn More →
+          </div>
+        )}
       </div>
     </div>
   );

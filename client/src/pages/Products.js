@@ -21,7 +21,8 @@ const Products = () => {
       id: 3,
       name: 'Tydii Text',
       description: 'A business messaging tool built to automate and streamline communication across digital channels.',
-      status: 'Coming Soon'
+      status: 'Coming Soon',
+      link: '/privacy'
     }
   ];
 

@@ -59,6 +59,14 @@ const Navbar = () => {
                 About
               </Link>
             </li>
+            <li className="navbar-item">
+              <Link 
+                to="/privacy" 
+                className={`navbar-link ${location.pathname === '/privacy' ? 'active' : ''}`}
+              >
+                Privacy
+              </Link>
+            </li>
           </ul>
           <ThemeToggle />
         </div>
