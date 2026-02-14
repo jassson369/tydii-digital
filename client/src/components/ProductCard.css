@@ -1,0 +1,104 @@
+.product-card {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .product-card {
+  background: rgba(235, 235, 235, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-lime), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-lime);
+  box-shadow: 0 8px 32px rgba(0, 255, 0, 0.2);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.product-status {
+  background: rgba(0, 255, 0, 0.1);
+  color: var(--accent-lime);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  white-space: nowrap;
+}
+
+.product-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.product-card-footer {
+  margin-top: auto;
+}
+
+.product-placeholder-link {
+  color: var(--accent-lime);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.product-placeholder-link:hover {
+  color: var(--accent-lime-dark);
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    padding: 1.5rem;
+  }
+
+  .product-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-name {
+    font-size: 1.25rem;
+  }
+}

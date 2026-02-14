@@ -1,0 +1,174 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+[data-theme="light"] .navbar {
+  background-color: rgba(235, 235, 235, 0.8);
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+[data-theme="light"] .navbar.scrolled {
+  background-color: rgba(235, 235, 235, 0.95);
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.9;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+/* Fallback if image doesn't load */
+.navbar-logo img[src=""] {
+  display: none;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+  font-weight: 700;
+}
+
+.logo-text-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo-text-sub {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-lime);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--accent-lime);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+.navbar-link.active {
+  color: var(--accent-lime);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+
+  .logo-image {
+    height: 32px;
+  }
+
+  .logo-text-main {
+    font-size: 1.25rem;
+  }
+
+  .logo-text-sub {
+    font-size: 0.75rem;
+  }
+
+  .navbar-right {
+    gap: 1rem;
+  }
+
+  .navbar-menu {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+}

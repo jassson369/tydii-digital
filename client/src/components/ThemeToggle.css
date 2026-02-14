@@ -1,0 +1,40 @@
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--accent-lime);
+  border-radius: 8px;
+  color: var(--accent-lime);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-lime);
+  color: var(--bg-primary);
+  transform: scale(1.05);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    padding: 0.4rem;
+  }
+
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
