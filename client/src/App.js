@@ -8,6 +8,7 @@ import Landing from './pages/Landing';
 import Products from './pages/Products';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
+import TydiiText from './pages/TydiiText';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/privacy-policy" element={<Privacy />} />
+              <Route path="/tydii-text" element={<TydiiText />} />
             </Routes>
             <Footer />
           </div>
