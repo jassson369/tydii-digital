@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './About.css';
 
@@ -27,6 +27,18 @@ const FacebookIcon = () => (
 );
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to contact section if hash is present
+    if (window.location.hash === '#contact') {
+      const element = document.getElementById('contact');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -52,8 +64,14 @@ const About = () => {
                 We envision a future where businesses of all sizes can leverage powerful digital tools to operate more efficiently, make better decisions, and focus on what matters most — delivering value to their customers and scaling their impact.
               </p>
             </div>
-            <div className="about-section">
+            <div className="about-section" id="contact">
               <h2 className="about-section-title">Connect With Us</h2>
+              <p className="about-text" style={{ marginBottom: '1rem' }}>
+                Email us at:{' '}
+                <a href="mailto:info@tydiidigital.com" style={{ color: 'var(--accent-lime)', textDecoration: 'none' }}>
+                  info@tydiidigital.com
+                </a>
+              </p>
               <div className="social-links">
                 <a 
                   href="https://www.instagram.com/tydii.digital?igsh=MWhna2M3N216dWxzNA==" 
