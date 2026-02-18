@@ -7,18 +7,6 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      name: 'Tydii Concierge',
-      description: 'A digital customer assistant designed to help businesses manage inquiries, bookings, and customer interactions from a single platform.',
-      status: 'Coming Soon'
-    },
-    {
-      id: 2,
-      name: 'FundPort',
-      description: 'A financial utility platform designed to help users manage, organize, and move funds across multiple digital services from a single interface.',
-      status: 'Coming Soon'
-    },
-    {
-      id: 3,
       name: 'Tydii Text',
       description: 'A business messaging tool built to automate and streamline communication across digital channels.',
       status: 'Coming Soon',
@@ -32,7 +20,7 @@ const Products = () => {
         <title>Our Products - Tydii Digital</title>
         <meta
           name="description"
-          content="Explore Tydii Digital's innovative products: Tydii Concierge, FundPort, and Tydii Text. Coming soon."
+          content="Explore Tydii Digital's innovative products: Tydii Text. Coming soon."
         />
       </Helmet>
       <div className="products-page">
